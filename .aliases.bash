@@ -7,9 +7,12 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias p="cd ~/Projects"
+alias mk="cd ~/Documents/Marketing"
+alias d="cd /Volumes/Classic\ HD/Dropbox/"
 alias v="mvim ."
 alias vi="vim"
 alias m="mate ."
+alias h="history"
 
 # Navigation
 # List all files colorized in long format, including dot files
@@ -24,13 +27,16 @@ alias bu='bundle update'
 
  # Ruby On Rails
 alias log="tail -f log/development.log"
-
+alias fstart="foreman start"
+alias dbm="rake db:migrate && rake db:test:prepare"
 # GIT
 alias gadd="git add . && git commit -a"
 alias gs="git status"
-alias gp="git pull"
+alias gpull="git pull"
+alias gpush="git push"
 alias g="git"
-
+alias gl="git l"
+alias gbr="~/bin/gbrt"
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
