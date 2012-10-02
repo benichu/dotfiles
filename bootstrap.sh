@@ -1,13 +1,22 @@
 #!/bin/bash
-############################
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
-############################
+
+echo "      _       _    __ _ _             "
+echo "     | |     | |  / _(_) |            "
+echo "   __| | ___ | |_| |_ _| | ___  ___   "
+echo "  / _\` |/ _ \| __|  _| | |/ _ \/ __|  "
+echo " | (_| | (_) | |_| | | | |  __/\__ \  "
+echo "(_)__,_|\___/ \__|_| |_|_|\___||___/  "
+echo "______________________________________________"
+echo
+echo "Installing dotfiles into user's home directory"
+echo
 
 ########## Variables
 
 dir=~/dotfiles        # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
-files="bashrc"        # list of files/folders to symlink in homedir
+# TODO: in progress
+files="bashrc tmux.conf gitignore"        # list of files/folders to symlink in homedir
 
 ##########
 
