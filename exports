@@ -1,3 +1,9 @@
+# Identify OS and Machine
+export OS=`uname -s | sed -e 's/ *//g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
+export OSVERSION=`uname -r`; OSVERSION=`expr "$OSVERSION" : '[^0-9]*\([0-9]*\.[0-9]*\)'`
+export MACHINE=`uname -m | sed -e 's/ *//g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
+export PLATFORM="$MACHINE-$OS-$OSVERSION"
+
 # Make vim the default editor
 export EDITOR="vim"
 # Don’t clear the screen after quitting a manual page
@@ -11,3 +17,10 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# Setting for the new UTF-8 terminal support in Lion
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US"
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+

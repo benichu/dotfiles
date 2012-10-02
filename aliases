@@ -1,5 +1,5 @@
 #!/bin/bash
-alias aliases='vim ~/dotfiles/.aliases.bash'
+alias aliases='vim ~/dotfiles/aliases'
 
 # Easier navigation
 alias ..="cd .."
@@ -7,8 +7,6 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias p="cd ~/Projects"
-alias mk="cd ~/Documents/Marketing"
-alias d="cd /Volumes/Classic\ HD/Dropbox/"
 alias v="mvim ."
 alias vi="vim"
 alias m="mate ."
@@ -36,7 +34,7 @@ alias gpull="git pull"
 alias gpush="git push"
 alias g="git"
 alias gl="git l"
-alias gbr="~/bin/gbrt"
+alias gbr="~/dotfiles/bin/gbrt"
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
@@ -54,7 +52,3 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # File size
 alias fs="stat -f \"%z bytes\""
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
