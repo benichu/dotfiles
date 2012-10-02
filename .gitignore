@@ -1,2 +1,9 @@
+# Private files
+extra
+# Folder view configuration files
 .DS_Store
-private.bash
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
