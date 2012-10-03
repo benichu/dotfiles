@@ -10,7 +10,7 @@ done
 unset file
 
 # Load Tab Completion
-COMPLETION="${HOME}/completion.bash/*.bash"
+COMPLETION="${HOME}/dotfiles/completion.bash/*.bash"
 for config_file in $COMPLETION
 do
   source $config_file

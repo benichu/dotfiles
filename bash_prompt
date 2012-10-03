@@ -63,5 +63,5 @@ __rbenv_ps1 ()
   fi
 }
 
-export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]$(__rbenv_ps1) \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" ➞ \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]$(__rbenv_ps1) \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" ➞  \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
