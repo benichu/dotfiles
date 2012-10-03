@@ -49,11 +49,12 @@ if [ -e $endpath/.git ]; then
 fi
 
 # move any existing dotfiles in homedir to a timestamped backup directory, then create symlinks
-for file in $files; do
+for file in $dotfiles; do
     # Backup existing dotfiles stuff
     echo "backing up any existing dotfiles in ~\n"
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/old.dotfiles.$today
+    mv ~/.$dotfiles ~/old.dotfiles.$today
     echo "Creating symlink to $file in home directory."
     lnif $endpath/$file ~/.$file
+    echo "...symlink done"
 done
