@@ -24,6 +24,7 @@ Optional, but recommended:
 
 * [rbenv](http://rbenv.org)
 * [Homebrew](http://mxcl.github.com/homebrew/) (OS X only)
+* [git-flow](http://github.com/nvie/gitflow)
 
 ## Vim
 
