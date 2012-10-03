@@ -10,34 +10,50 @@ echo
 echo "Installing dotfiles into your home directory"
 echo
 
+########## Functions
+
+warn() {
+    echo "$1" >&2
+}
+
+die() {
+    warn "$1"
+    exit 1
+}
+
+lnif() {
+    if [ ! -e $2 ] ; then
+        ln -s $1 $2
+    fi
+}
+
 ########## Variables
 
 endpath="$HOME/dotfiles" # dotfiles directory
-olddir=~/dotfiles_old # old dotfiles backup directory
-# TODO: in progress
-files="bashrc gitattributes tmux.conf gemrc ackrc inputrc gitignore"        # list of files/folders to symlink in homedir
+today=`date +%F-%T`
+
+# list of files/folders to symlink in homedir
+dotfiles="bashrc gitattributes tmux.conf gemrc ackrc inputrc gitignore"
 
 ##########
 
-# TODO: Better backup of older dotfiles (timestamp)
-# create dotfiles_old in homedir
-echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
-echo "...done"
+echo "thanks for installing this dotfile\n"
 
 # change to the dotfiles directory
-echo "Changing to the $dir directory"
+echo "changing to the $endpath directory\n"
 cd $endpath
 if [ -e $endpath/.git ]; then
   echo "getting the latest version of your dotfiles\n"
   cd $endpath && git pull
+  echo "...update done"
 fi
-echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+# move any existing dotfiles in homedir to a timestamped backup directory, then create symlinks
 for file in $files; do
+    # Backup existing dotfiles stuff
+    echo "backing up any existing dotfiles in ~\n"
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file ~/old.dotfiles.$today
     echo "Creating symlink to $file in home directory."
-    ln -s $endpath/$file ~/.$file
+    lnif $endpath/$file ~/.$file
 done
