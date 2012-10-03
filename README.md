@@ -41,5 +41,6 @@ curl http://2ret.com/vim -L -o - | sh
 ## References
 
 * [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+* [https://github.com/aziz/dotfiles](https://github.com/aziz/dotfiles)
 * [Bash Reference Manual](http://www.gnu.org/software/bash/manual/bashref.html)
 * [https://github.com/benichu/2ret-vim](https://github.com/benichu/2ret-vim)

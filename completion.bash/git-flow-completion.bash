@@ -192,3 +192,4 @@ feature)
               if [ -z "`type -t __git_find_on_cmdline`" ]; then
                 alias __git_find_on_cmdline=__git_find_subcommand
                 finish)"}||}"}"}|"})"}"}
+
