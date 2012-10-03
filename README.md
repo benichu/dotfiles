@@ -6,10 +6,10 @@
 git clone https://github.com/benichu/dotfiles.git && cd dotfiles && ./bootstrap.sh
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
+## Update
 
 ```bash
-./bootstrap.sh
+cd ~/dotfiles && git pull https://github.com/benichu/dotfiles.git && ./bootstrap.sh
 ```
 
 ## References:
