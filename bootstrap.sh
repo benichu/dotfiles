@@ -57,5 +57,7 @@ for dotfile in $dotfiles; do
     [ -e $dotfile ] && [ ! -L $file ] && mv $HOME/.$dotfiles $backupdir
     echo "Creating symlink to $file in home directory."
     lnif $endpath/$dotfile $HOME/.$dotfile
-    echo "... $dotfile symlink done"
 done
+
+source $HOME/.bashrc
+echo "your new dotfiles has been sourced... BAM!"
