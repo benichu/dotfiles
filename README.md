@@ -14,6 +14,12 @@ cd ~/dotfiles && git pull https://github.com/benichu/dotfiles.git && ./bootstrap
 
 Don't worry, all your old files will be backed up!
 
+Also, you might need to manually source your bashrc file:
+
+```bash
+source ~/.bashrc
+```
+
 ## Prerequisites
 
 * Git (1.7+)
