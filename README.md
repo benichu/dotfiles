@@ -57,4 +57,5 @@ centralize those private settings files:
 
 * git & github ids and keys
 * .ssh
+* rbenv version not refreshed in PS1, when switching .rbenv-version
 * known_hosts
