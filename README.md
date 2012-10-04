@@ -50,3 +50,11 @@ curl http://2ret.com/vim -L -o - | sh
 * [https://github.com/aziz/dotfiles](https://github.com/aziz/dotfiles)
 * [Bash Reference Manual](http://www.gnu.org/software/bash/manual/bashref.html)
 * [https://github.com/benichu/2ret-vim](https://github.com/benichu/2ret-vim)
+
+## TODO
+
+centralize those private settings files:
+
+* git & github ids and keys
+* .ssh
+* known_hosts
