@@ -34,7 +34,7 @@ today=`date +%F-%T`
 backupdir="$HOME/old.dotfiles.$today"
 
 # list of files/folders to symlink in homedir
-dotfiles="bashrc gitattributes gitconfig tmux.conf gemrc ackrc inputrc gitignore"
+dotfiles="bashrc bash_profile gitattributes gitconfig tmux.conf gemrc ackrc inputrc gitignore"
 
 ##########
 
