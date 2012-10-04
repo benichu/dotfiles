@@ -52,16 +52,9 @@ function parse_git_branch() {
 }
 
 # prompt with ruby version
-# rbenv version | sed -e 's/ .*//'
-__rbenv_ps1 ()
-{
-  if [ -d "$HOME/.rbenv" ] ; then
-    rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
-    printf "@$rbenv_ruby_version"
-  else
-    printf ""
-  fi
+function rbenv_version() {
+  rbenv version 2> /dev/null | sed 's/\([^ ]*\).*/(\1)/'
 }
 
-export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]$(__rbenv_ps1) \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" ➞  \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]$(rbenv_version) \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" ➞  \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
