@@ -40,7 +40,7 @@ alias bu='bundle update'
 
  # Ruby On Rails
 alias log="tail -f log/development.log"
-alias fstart="foreman start"
+alias fst="foreman start"
 alias dbm="rake db:migrate && rake db:test:prepare"
 # GIT
 alias gadd="git add . && git commit -a"

@@ -19,6 +19,10 @@ done
 unset file
 
 # Load Tab Completion
+if [ -f `brew --prefix`/etc/bash_completion.d ]; then
+    . `brew --prefix`/etc/bash_completion.d
+fi
+
 COMPLETION="${HOME}/dotfiles/completion.bash/*.bash"
 for config_file in $COMPLETION
 do
