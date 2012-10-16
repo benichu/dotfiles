@@ -5,8 +5,7 @@ export PATH="$HOME/bin:$PATH"
 . ~/dotfiles/bin/bash_colors.sh
 
 # rbenv
-if [ -d "$HOME/.rbenv/bin" ] ; then
-  export PATH="$HOME/.rbenv/bin":$PATH
+if [ -d "$HOME/.rbenv/shims" ] ; then
   eval "$(rbenv init -)"
 fi
 
