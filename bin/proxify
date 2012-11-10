@@ -19,13 +19,14 @@
 #   # => Reads the process id from /tmp/proxify.pid and kills that process.
 #
 
-PORT=8080                # The local port to be used for forwarding. Change if desired.
+PORT=8080                  # The local port to be used for forwarding. Change if desired.
 
 if [ $# -lt 2 ]
-  REMOTE=$2
 then
-  REMOTE=netflix           # Your server. Mine is aliased in ~/.ssh/config as netflix.
+  REMOTE=netflix_us        # Your server. Mine is aliased in ~/.ssh/config as netflix.
                            # this would typically be something like user@server or similar.
+else
+  REMOTE=$2
 fi
 
 PIDFILE=/tmp/proxify.pid # will just hold the numeric process id of the tunnel
@@ -52,7 +53,7 @@ case "$1" in
     echo "Tunnel has been closed."
     ;;
   *)
-    echo -e "\nUsage:\n proxify start server (optional, default=netflix)"
+    echo -e "\nUsage:\n proxify start user@server (optional, default ssh alias=netflix_us)"
     echo -e " proxify stop"
     exit 1
     ;;
