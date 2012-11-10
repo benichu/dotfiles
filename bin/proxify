@@ -1,0 +1,52 @@
+#!/bin/bash
+#
+# A simple script to set up or stop a SSH tunnel
+# to another remote server
+#
+# Usage:
+#
+#   profixy start server
+#   # => Sets up the tunnel and saves the PID in /tmp/proxify.pid
+#
+#   profixy stop
+#   # => Reads the process id from /tmp/proxify.pid and kills that process.
+#
+
+PORT=8080                # The local port to be used for forwarding. Change if desired.
+
+if [ $# -lt 2 ]
+  REMOTE=$2
+then
+  REMOTE=netflix           # Your server. Mine is aliased in ~/.ssh/config as netflix.
+                           # this would typically be something like user@server or similar.
+fi
+
+PIDFILE=/tmp/proxify.pid # will just hold the numeric process id of the tunnel
+
+case "$1" in
+  'start')
+    ssh -ND localhost:$PORT $REMOTE &
+
+    # save the PID of the tunnel to the PID file
+    echo $! > $PIDFILE
+
+    echo "Tunnel has been opened on localhost:$PORT"
+    ;;
+  'stop')
+    if [ -f $PIDFILE ] ; then
+      kill `cat $PIDFILE`
+      rm $PIDFILE
+      echo "Tunnel has been closed."
+    else # no PID file exists, must not have a tunnel opened.
+      echo "Cannot find a PID file $PIDFILE. Are you sure a tunnel is open?"
+    fi
+    ;;
+  *)
+    echo -e "\nUsage:\n proxify start server (optional, default=netflix)"
+    echo -e " proxify stop"
+    exit 1
+    ;;
+esac
+exit 0
+
+
