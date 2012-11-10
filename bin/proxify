@@ -3,6 +3,13 @@
 # A simple script to set up or stop a SSH tunnel
 # to another remote server
 #
+# You can then setup a proxy in your favorite browser, like
+# Firefox with this extension: FoxyProxy Basic
+# You want to use:
+# - server: localhost
+# - port: 8080
+# - connection type: Socks version 5
+#
 # Usage:
 #
 #   profixy start server
