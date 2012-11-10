@@ -23,8 +23,16 @@ fi
 
 PIDFILE=/tmp/proxify.pid # will just hold the numeric process id of the tunnel
 
+kill_process() {
+  if [ -f $PIDFILE ] ; then
+    kill `cat $PIDFILE`
+    rm $PIDFILE
+  fi
+}
+
 case "$1" in
   'start')
+    kill_process
     ssh -ND localhost:$PORT $REMOTE &
 
     # save the PID of the tunnel to the PID file
@@ -33,13 +41,8 @@ case "$1" in
     echo "Tunnel has been opened on localhost:$PORT"
     ;;
   'stop')
-    if [ -f $PIDFILE ] ; then
-      kill `cat $PIDFILE`
-      rm $PIDFILE
-      echo "Tunnel has been closed."
-    else # no PID file exists, must not have a tunnel opened.
-      echo "Cannot find a PID file $PIDFILE. Are you sure a tunnel is open?"
-    fi
+    kill_process
+    echo "Tunnel has been closed."
     ;;
   *)
     echo -e "\nUsage:\n proxify start server (optional, default=netflix)"
