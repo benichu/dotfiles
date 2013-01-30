@@ -45,10 +45,11 @@ alias dbm="rake db:migrate && rake db:test:prepare"
 # GIT
 alias gadd="git add . && git commit -a"
 alias gs="git status"
-alias gpull="git pull"
+alias gpull="git-up"
 alias gpush="git push"
 alias g="git"
 alias gl="git l"
+alias gb="git branch"
 alias gbr="~/dotfiles/bin/gbrt"
 alias gwtf="~/dotfiles/bin/git-wtf"
 # IP addresses

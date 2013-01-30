@@ -23,4 +23,6 @@
 --ignore-dir=system
 --ignore-dir=public
 --ignore-dir=bin
+--ignore-dir=node_modules
+--ignore-dir=build
 
