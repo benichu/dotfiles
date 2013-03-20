@@ -20,11 +20,8 @@ else # OS X `ls`
   colorflag="-G"
 fi
 
-# List all files colorized in long format
-alias l="clear && pwd && ls -l ${colorflag}"
-
 # List all files colorized in long format, including dot files
-alias la="clear && pwd && ls -la ${colorflag}"
+alias l="clear && pwd && ls -la ${colorflag}"
 
 # List only directories
 alias lsd='ls -l ${colorflag} | grep "^d"'
@@ -45,7 +42,7 @@ alias dbm="rake db:migrate && rake db:test:prepare"
 # GIT
 alias gadd="git add . && git commit -a"
 alias gs="git status"
-alias gpull="git-up"
+alias gpull="git pull --rebase"
 alias gpush="git push"
 alias g="git"
 alias gl="git l"
