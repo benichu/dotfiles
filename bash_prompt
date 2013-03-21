@@ -11,5 +11,5 @@ function rbenv_version() {
   rbenv version 2> /dev/null | sed 's/\([^ ]*\).*/(\1)/'
 }
 
-export PS1="\[${BRIGHT_BLACK}\]\u\[$RESET\]\$(rbenv_version) \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" ➞  \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+export PS1="\[${BRIGHT_WHITE}\]\u\[$RESET\] \$(rbenv_version) \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" ➞  \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 export PS2="\[$RED\]→ \[$RESET\]"
