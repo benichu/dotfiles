@@ -1,3 +1,8 @@
 # Add `~/dotfiles/bin` to the `$PATH`
-export PATH="$HOME/dotfiles/bin:/usr/local/share/npm/bin:$PATH"
 
+PATH="$HOME/dotfiles/bin:/usr/local/share/npm/bin:$PATH"
+
+if [ -f "$(brew --prefix coreutils)/libexec/gnubin/ls" ]; then
+  PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
+export PATH
