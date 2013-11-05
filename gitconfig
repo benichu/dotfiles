@@ -13,9 +13,9 @@
   who = shortlog -n -s --no-merges
   rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
 [core]
-	editor = /usr/local/bin/vim
+  editor = /usr/local/bin/vim
 [col2ddor]
-	ui = always
+  ui = always
 [apply]
   whitespace = warn
 [color]

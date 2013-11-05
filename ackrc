@@ -16,6 +16,7 @@
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
+--ignore-dir=.tmp
 --ignore-dir=doc
 --ignore-dir=coverage
 --ignore-dir=fixtures
@@ -25,4 +26,6 @@
 --ignore-dir=bin
 --ignore-dir=node_modules
 --ignore-dir=build
+--ignore-dir=dist
+--ignore-dir=bower_components
 

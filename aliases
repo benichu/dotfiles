@@ -9,8 +9,9 @@ alias ...="cd ../.."
 alias p="cd ~/Projects"
 alias v="mvim ."
 alias vi="vim"
-alias m="mate ."
+alias tm="tmux"
 alias h="history"
+alias gh="open -a google\ chrome 'http://github.com/benichu'"
 
 # Navigation
 # Detect which `ls` flavor is in use
@@ -44,9 +45,11 @@ alias gadd="git add . && git commit -a"
 alias gs="git status"
 alias gpull="git pull --rebase"
 alias gpush="git push"
+
 alias g="git"
 alias gl="git l"
 alias gb="git branch"
+alias gdiff="git diff --cached"
 alias gbr="~/dotfiles/bin/gbrt"
 alias gwtf="~/dotfiles/bin/git-wtf"
 # IP addresses
