@@ -7,7 +7,6 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias p="cd ~/Projects"
-alias v="mvim ."
 alias vi="vim"
 alias tm="tmux"
 alias h="history"
@@ -60,11 +59,13 @@ alias whois="whois -h whois-servers.net"
 
 # Aliases using OS dependent flags
 if [ $OSTYPE = 'linux-gnu' ]; then
+  alias v="gvim ."
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   # Flush Directory Service cache
   alias flush="/etc/init.d/dns-clean start"
 else
+  alias v="mvim ."
   # Flush Directory Service cache
   alias flush="dscacheutil -flushcache"
   # Recursively delete `.DS_Store` files
