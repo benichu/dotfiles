@@ -30,3 +30,5 @@
 [user]
 	email = ben@2ret.com
 	name = Ben Thouret
+[push]
+	default = simple
