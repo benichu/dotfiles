@@ -42,7 +42,7 @@ alias fst="foreman start"
 alias dbm="rake db:migrate && rake db:test:prepare"
 # GIT
 alias gadd="git add . && git commit -a"
-alias gs="git status"
+alias gst="git status"
 alias gpull="git pull --rebase"
 alias gpush="git push"
 

@@ -13,7 +13,7 @@
   who = shortlog -n -s --no-merges
   rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
 [core]
-  editor = /usr/local/bin/vim
+  editor = /usr/bin/vim
 [col2ddor]
   ui = always
 [apply]
@@ -27,3 +27,6 @@
   autocorrect = 1
 [status]
   submodule = 1
+[user]
+	email = ben@2ret.com
+	name = Ben Thouret

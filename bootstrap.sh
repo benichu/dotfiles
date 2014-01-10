@@ -22,9 +22,7 @@ die() {
 }
 
 lnif() {
-    if [ ! -e $2 ] ; then
-        ln -s $1 $2
-    fi
+    ln -sf $1 $2
 }
 
 ########## Variables
