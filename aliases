@@ -58,14 +58,21 @@ alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias whois="whois -h whois-servers.net"
 
+# Aliases using OS dependent flags
+if [ $OSTYPE = 'linux-gnu' ]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+  # Flush Directory Service cache
+  alias flush="/etc/init.d/dns-clean start"
+else
+  # Flush Directory Service cache
+  alias flush="dscacheutil -flushcache"
+  # Recursively delete `.DS_Store` files
+  alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+fi
+
 # Pipe my public key to my clipboard.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
-
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # File size
 alias fs="stat -f \"%z bytes\""
