@@ -24,5 +24,6 @@ do
 done
 
 # Load Tab Completion
-[ -f "$(brew)" ] && [ -f "$(brew --prefix)/etc/bash_completion" ] && source $(brew --prefix)/etc/bash_completion
-
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  [ -f "$(brew --prefix)/etc/bash_completion" ] && source $(brew --prefix)/etc/bash_completion
+fi

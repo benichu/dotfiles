@@ -2,7 +2,9 @@
 
 PATH="$HOME/dotfiles/bin:/usr/local/share/npm/bin:$PATH"
 
-if [ -f "$(brew)" ] && [ -f "$(brew --prefix coreutils)/libexec/gnubin/ls" ]; then
-  PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  if [ -f "$(brew --prefix coreutils)/libexec/gnubin/ls" ]; then
+    PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  fi
 fi
 export PATH
