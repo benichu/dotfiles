@@ -1,22 +1,28 @@
 function ss  {
-  if [ -e script/rails ]; then
+  if [ -e script/rails ]; then # Rails 3
     script/rails server $@
-  else
+  elif [ -e script/server ]; then # Rails 2
     script/server $@
+  else # Rails 4
+    rails server $@
   fi
 }
 function sc {
-  if [ -e script/rails ]; then
+  if [ -e script/rails ]; then # Rails 3
     script/rails console $@
-  else
+  elif [ -e script/console ]; then # Rails 2
     script/console $@
+  else # Rails 4
+    rails console $@
   fi
 }
 function sg {
-  if [ -e script/rails ]; then
+  if [ -e script/rails ]; then # Rails 3
     script/rails generate $@
-  else
+  if [ -e script/generate ]; then # Rails 2
     script/generate $@
+  else # Rails 4
+    rails generate $@
   fi
 }
 function isreg {
