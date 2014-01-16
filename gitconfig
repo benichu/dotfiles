@@ -26,6 +26,8 @@
   autocorrect = 1
 [status]
   submodule = 1
+[github]
+  user = benichu
 [user]
   email = ben@2ret.com
   name = Ben Thouret
