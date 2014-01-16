@@ -40,7 +40,7 @@ alias log="tail -f log/development.log"
 alias fst="foreman start"
 alias dbm="rake db:migrate && rake db:test:prepare"
 # GIT
-alias gadd="git add . && git commit -a"
+alias gadd="git add --all . && git commit -a"
 alias gst="git status"
 alias gpull="git pull --rebase"
 alias gpush="git push"
