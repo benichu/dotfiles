@@ -19,7 +19,7 @@ function sc {
 function sg {
   if [ -e script/rails ]; then # Rails 3
     script/rails generate $@
-  if [ -e script/generate ]; then # Rails 2
+  elif [ -e script/generate ]; then # Rails 2
     script/generate $@
   else # Rails 4
     rails generate $@
