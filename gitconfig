@@ -28,7 +28,7 @@
 [status]
   submodule = 1
 [user]
-	email = ben@2ret.com
-	name = Ben Thouret
+  email = ben@2ret.com
+  name = Ben Thouret
 [push]
-	default = simple
+  default = simple
