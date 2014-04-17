@@ -28,3 +28,4 @@ function rbenv_version() {
 
 export PS1="\u\[$RESET\] \$(rbenv_version) \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" ➞  \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 export PS2="\[$RED\]→ \[$RESET\]"
+

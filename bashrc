@@ -2,6 +2,10 @@
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+# VI mode in the terminal
+# FIXME: Make sure it works on both ubuntu and Mac
+set -o vi
+
 # Color codes
 . ~/dotfiles/bin/bash_colors.sh
 

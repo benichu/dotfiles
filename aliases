@@ -38,7 +38,7 @@ alias bu='bundle update'
  # Ruby On Rails
 alias log="tail -f log/development.log"
 alias fst="foreman start"
-alias dbm="rake db:migrate && rake db:test:prepare"
+alias dbm="be rake db:migrate && be rake db:test:prepare"
 # GIT
 alias gadd="git add --all . && git commit -a"
 alias gst="git status"
@@ -56,6 +56,9 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias whois="whois -h whois-servers.net"
+
+# Tmux
+alias tmux="TERM=screen-256color-bce tmux"
 
 # Aliases using OS dependent flags
 if [ $OSTYPE = 'linux-gnu' ]; then
