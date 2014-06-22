@@ -28,4 +28,8 @@
 --ignore-dir=build
 --ignore-dir=dist
 --ignore-dir=bower_components
+--ignore-dir=vagrant
+--ignore-dir=puppet
+--ignore-file=is:tags
+--ignore-file=is:gems.tags
 

@@ -69,6 +69,7 @@ if [ $OSTYPE = 'linux-gnu' ]; then
   alias flush="/etc/init.d/dns-clean start"
 else
   alias v="mvim ."
+  alias tmux="TERM=screen-256color-bce tmux"
   # Flush Directory Service cache
   alias flush="dscacheutil -flushcache"
   # Recursively delete `.DS_Store` files
