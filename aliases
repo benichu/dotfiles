@@ -8,6 +8,7 @@ alias ...="cd ../.."
 # Shortcuts
 alias p="cd ~/Projects"
 alias vi="vim"
+alias v="vim ."
 alias tm="tmux"
 alias h="history"
 alias gh="open -a google\ chrome 'http://github.com/benichu'"
@@ -62,13 +63,11 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # Aliases using OS dependent flags
 if [ $OSTYPE = 'linux-gnu' ]; then
-  alias v="gvim ."
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   # Flush Directory Service cache
   alias flush="/etc/init.d/dns-clean start"
 else
-  alias v="mvim ."
   alias tmux="TERM=screen-256color-bce tmux"
   # Flush Directory Service cache
   alias flush="dscacheutil -flushcache"
