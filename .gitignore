@@ -1,6 +1,7 @@
 # Private files
 secrets
 local_aliases
+gitconfig
 # Folder view configuration files
 .DS_Store
 Desktop.ini
