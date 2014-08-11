@@ -28,17 +28,14 @@ set editing-mode emacs
 #C-n: history-search-forward
 #C-p: history-search-backward
 
-"\e[B": history-search-forward
 "\e[A": history-search-backward
+"\e[B": history-search-forward
 
 
 $if mode=emacs
 
 # make control-tab complete from history
 # C-TAB: dynamic-complete-history
-
-"\e[A": history-search-backward
-"\e[B": history-search-forward
 
 # for linux console and RH/Debian xterm
 "\e[1~": beginning-of-line
