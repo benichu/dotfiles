@@ -12,7 +12,7 @@ set -o vi
 # rbenv
 if [ -d "$HOME/.rbenv/shims" ] ; then
   eval "$(rbenv init -)"
-  export PATH=./bin:"$PATH"
+  # export PATH=./bin:"$PATH"
 fi
 
 # Load the shell dotfiles, and then some:
