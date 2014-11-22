@@ -34,7 +34,7 @@ Optional, but recommended:
 
 ## Bash Prompt (iTerm2 with [solarized color scheme](https://github.com/altercation/solarized))
 
-![bash_prompt](https://www.dropbox.com/s/putowl34af9s7pu/1._bash_2014-11-22_13-40-37.jpg?dl=1)
+![bash_prompt](https://www.dropbox.com/s/c5dvaoe6taazmnd/bash-prompt.png?dl=1)
 
 ## Vim
 
