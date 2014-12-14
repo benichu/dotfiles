@@ -48,17 +48,27 @@ This will install 2ret-vim and backup your existing vim configuration.
 curl http://2ret.com/vim -L -o - | sh
 ```
 
+## Tmux Pairing Setup
+
+This is the pairing setup I use to share a Tmux/Vim session with authentified user on my development machine.
+
+### Requirements
+
+- vim
+- tmux
+- [github-auth](https://github.com/chrishunt/github-auth)
+- [ngrok](https://ngrok.com/)
+- unpriviledged `pair` user
+
+### Setup
+
+### Pair with someone
+
+### Remove
+
 ## References
 
 * [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [https://github.com/aziz/dotfiles](https://github.com/aziz/dotfiles)
 * [Bash Reference Manual](http://www.gnu.org/software/bash/manual/bashref.html)
 * [https://github.com/benichu/2ret-vim](https://github.com/benichu/2ret-vim)
-
-## TODO
-
-centralize those private settings files:
-
-* git & github ids and keys
-* .ssh
-* known_hosts
