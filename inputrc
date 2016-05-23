@@ -14,7 +14,11 @@ set match-hidden-files on
 # completion settings
 set page-completions off
 set completion-query-items 2000
+# Treat hyphens and underscores as equivalent
+set completion-map-case on
+# Perform file completion in a case insensitive fashion
 set completion-ignore-case on
+# Display matches for ambiguous patterns at first tab press
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set completion-prefix-display-length 10

@@ -1,16 +1,12 @@
-# function parse_git_dirty() {
-#   git diff --quiet  2> /dev/null || echo "*"
-# }
+function parse_git_dirty () {
+# ?? file.txt # Unstaged new files
+# A  file.txt # Staged new files
+#  M file.txt # Unstaged modified files
+# M  file.txt # Staged modified files
+#  D file.txt # Unstaged deleted files
+# D  file.txt # Staged deleted files
 
-parse_git_dirty () {
-  # ?? file.txt # Unstaged new files
-  # A  file.txt # Staged new files
-  #  M file.txt # Unstaged modified files
-  # M  file.txt # Staged modified files
-  #  D file.txt # Unstaged deleted files
-  # D  file.txt # Staged deleted files
-
-  # If the git status has *any* changes (i.e. dirty)
+# If the git status has *any* changes (i.e. dirty)
   if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then
     # echo our character
     echo " ↺"
@@ -18,7 +14,7 @@ parse_git_dirty () {
 }
 
 function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
 # prompt with ruby version

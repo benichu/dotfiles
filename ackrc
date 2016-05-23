@@ -30,6 +30,7 @@
 --ignore-dir=bower_components
 --ignore-dir=vagrant
 --ignore-dir=puppet
+--ignore-dir=target
+--ignore-dir=out
 --ignore-file=is:tags
 --ignore-file=is:gems.tags
-

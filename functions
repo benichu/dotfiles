@@ -1,3 +1,15 @@
+# TMUX
+# Create a new named tmux session
+function tn {
+ session_name=$1
+  if [ -z "$session_name" ]; then
+    echo "You need to give a session name."
+  else
+    tmux new-session -A -s $session_name
+  fi
+}
+
+# Rails
 function ss  {
   if [ -e script/rails ]; then # Rails 3
     script/rails server $@
@@ -25,13 +37,19 @@ function sg {
     rails generate $@
   fi
 }
+
+# DNS
 function isreg {
   whois $1 | grep -q 'No match' && echo "No" || echo "Yes"
 }
+
+# System
 # Create a new directory and enter it
 function mkd() {
   mkdir -p "$@" && cd "$@"
 }
+
+# Custom GIT prompt
 git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then

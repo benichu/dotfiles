@@ -1,7 +1,12 @@
+# Vagrant stuff
+boxes/*
+/.vagrant
+.vagrant/
 # Folder view configuration files
 .DS_Store
 Desktop.ini
-
+# Logs
+*.log
 # Thumbnail cache files
 ._*
 Thumbs.db

@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # VI mode in the terminal

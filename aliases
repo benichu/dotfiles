@@ -9,7 +9,7 @@ alias ...="cd ../.."
 alias p="cd ~/Projects"
 alias vi="vim"
 alias v="vim ."
-alias tm="tmux"
+alias tl="tmux ls"
 alias h="history"
 alias gh="open -a google\ chrome 'http://github.com/benichu'"
 
@@ -43,13 +43,13 @@ alias dbm="be rake db:migrate && be rake db:test:prepare"
 # GIT
 alias gadd="git add --all . && git commit -a"
 alias gst="git status"
-alias gpull="git pull --rebase"
+alias gpull="git pull"
 alias gpush="git push"
 
 alias g="git"
 alias gl="git l"
 alias gb="git branch"
-alias gdiff="git diff --cached"
+alias gdiff="git diff HEAD"
 alias gbr="~/dotfiles/bin/gbrt"
 alias gwtf="~/dotfiles/bin/git-wtf"
 # IP addresses
@@ -57,9 +57,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias whois="whois -h whois-servers.net"
-
-# Tmux
-alias tmux="TERM=screen-256color-bce tmux"
 
 # Aliases using OS dependent flags
 if [ $OSTYPE = 'linux-gnu' ]; then
@@ -69,8 +66,6 @@ if [ $OSTYPE = 'linux-gnu' ]; then
   alias flush="/etc/init.d/dns-clean start"
 else
   alias tmux="TERM=screen-256color-bce tmux"
-  # Flush Directory Service cache
-  alias flush="dscacheutil -flushcache"
   # Recursively delete `.DS_Store` files
   alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 fi

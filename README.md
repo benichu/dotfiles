@@ -25,6 +25,7 @@ source ~/.bashrc
 * Git (1.7+)
 * Ruby (1.9 recommended) and RubyGems
 * Vim (7.3+)
+* Tmux (2.1+)
 
 Optional, but recommended:
 
